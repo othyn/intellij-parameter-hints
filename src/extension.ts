@@ -7,11 +7,11 @@ const hintDecorationType = vscode.window.createTextEditorDecorationType({});
 function getAttrName(editor: vscode.TextEditor, position: vscode.Position, key: number) {
 	return new Promise(async (resolve) => {
 		var args: vscode.Location[] = [];
-		var hoverCommand = await vscode.commands.executeCommand<vscode.Hover[]>("vscode.executeHoverProvider", editor.document.uri, position);
+		var hoverCommand: any = await vscode.commands.executeCommand<vscode.Hover[]>("vscode.executeHoverProvider", editor.document.uri, position);
 
 		if (hoverCommand && hoverCommand.length > 0) {
 			try {
-				const regEx = /(?<=@param.+)(\$[a-zA-Z0-9_]+)/g
+				const regEx = /(?<=@param.+)(\$[a-zA-Z0-9_]+)/g;
 				args = hoverCommand[0].contents[0].value.match(regEx);
 			} catch(err) {}
 		}
@@ -54,7 +54,7 @@ export function activate(context: vscode.ExtensionContext) {
 			const start = new vscode.Position(argument.start.line, argument.start.character);
 			const end = new vscode.Position(argument.end.line, argument.end.character);
 
-			const args = await getAttrName(activeEditor, new vscode.Position(argument.expression.line, argument.expression.character), argument.key)
+			const args: any = await getAttrName(activeEditor, new vscode.Position(argument.expression.line, argument.expression.character), argument.key);
 			if (args) {
 				const decorationPHP = Annotations.paramAnnotation(args.replace('$', '  ') + ':  ', new vscode.Range(start, end));
 
