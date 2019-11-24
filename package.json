@@ -1,8 +1,9 @@
 {
 	"name": "intellij-parameter-hints",
 	"displayName": "IntelliJ Parameter Hints",
-	"description": "PHP Parameter Hints in IntelliJ Style",
-	"version": "0.1",
+    "description": "PHP Parameter Hints in IntelliJ Style",
+    "publisher": "BobbyZrncev",
+	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.40.0"
 	},
