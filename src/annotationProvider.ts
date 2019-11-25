@@ -1,4 +1,4 @@
-import { DecorationInstanceRenderOptions, DecorationOptions, Range, workspace } from "vscode";
+import { DecorationInstanceRenderOptions, ThemeColor, DecorationOptions, Range, workspace } from "vscode";
 
 export class Annotations {
 	public static paramAnnotation(message: string, range: Range): DecorationOptions {
@@ -6,13 +6,13 @@ export class Annotations {
 			range,
 			renderOptions: {
 				before: {
-					color: workspace.getConfiguration("jsannotations").get("annotationForeground") || "#adbec5",
-					backgroundColor: workspace.getConfiguration("jsannotations").get("annotationBackground") || '#1e2c31',
+                    color: new ThemeColor("phpannotations.annotationForeground"),
+                    backgroundColor: new ThemeColor("phpannotations.annotationBackground"),
 					contentText: message,
-					margin: "0px 5px",
-					height: '-10px',
-					fontStyle: workspace.getConfiguration("jsannotations").get("fontStyle"),
-					fontWeight: workspace.getConfiguration("jsannotations").get("fontWeight"),
+                    margin: "0px " + workspace.getConfiguration("phpannotations").get("margin") + "px",
+                    height: '-10px',
+                    fontStyle: workspace.getConfiguration("phpannotations").get("fontStyle"),
+                    fontWeight: workspace.getConfiguration("phpannotations").get("fontWeight"),
 				}
 			} as DecorationInstanceRenderOptions
 		} as DecorationOptions;

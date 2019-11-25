@@ -3,7 +3,12 @@
 	"displayName": "IntelliJ Parameter Hints",
     "description": "PHP Parameter Hints in IntelliJ Style",
     "publisher": "BobbyZrncev",
-    "version": "0.0.1",
+    "version": "0.1.0",
+    "license": "MIT",
+    "homepage": "https://github.com/bzrncev/intellij-parameter-hints",
+    "bugs": {
+        "url": "https://github.com/bzrncev/intellij-parameter-hints/issues"
+    },
     "repository": {
         "type": "git",
         "uri": "https://github.com/bzrncev/intellij-parameter-hints"
@@ -19,7 +24,82 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-	},
+        "commands": [
+            {
+                "command": "phpannotations.toggle",
+                "title": "PHP Annotations: Hide / Show Annotations"
+            }
+        ],
+        "configuration": [
+            {
+                "title": "PHP Annotations",
+                "properties": {
+                    "phpannotations.enabled": {
+                        "type": "boolean",
+                        "description": "Enable PHP Annotations",
+                        "default": true
+                    },
+                    "phpannotations.fontWeight": {
+                        "type": "string",
+                        "default": "400",
+                        "enum": [
+                            "100",
+                            "200",
+                            "300",
+                            "400",
+                            "500",
+                            "600",
+                            "700",
+                            "800",
+                            "900"
+                        ],
+                        "description": "Annotation styling of font-weight CSS property"
+                    },
+                    "phpannotations.fontStyle": {
+                        "type": "string",
+                        "default": "italic",
+                        "enum": [
+                            "normal",
+                            "italic"
+                        ],
+                        "description": "Annotation styling of font-style CSS property"
+                    },
+                    "phpannotations.margin": {
+                        "type": "number",
+                        "default": 5,
+                        "description": "Annotation styling of margin CSS property"
+                    }
+                }
+            }
+        ],
+        "colors": [
+            {
+                "id": "phpannotations.annotationForeground",
+                "description": "Specifies the foreground color for the annotations",
+                "defaults": {
+                    "dark": "#adbec5",
+                    "light": "#797a79",
+                    "highContrast": "#adbec5"
+                }
+            },
+            {
+                "id": "phpannotations.annotationBackground",
+                "description": "Specifies the background color for the annotations",
+                "defaults": {
+                    "dark": "#1e2c31",
+                    "light": "#f4f5f4",
+                    "highContrast": "#1e2c31"
+                }
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "phpannotations.toggle",
+                "key": "ctrl+k a",
+                "mac": "cmd+k a"
+            }
+        ]
+    },
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
