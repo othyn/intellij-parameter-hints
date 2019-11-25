@@ -1,5 +1,9 @@
 # PHP Parameter Annotations for Visual Studio Code
 
+[![VS Marketplace Version](https://vsmarketplacebadge.apphb.com/version-short/BobbyZrncev.intellij-parameter-hints.svg)](https://marketplace.visualstudio.com/items?itemName=BobbyZrncev.intellij-parameter-hints)
+[![VS Marketplace Installs](https://vsmarketplacebadge.apphb.com/installs-short/BobbyZrncev.intellij-parameter-hints.svg)](https://marketplace.visualstudio.com/items?itemName=BobbyZrncev.intellij-parameter-hints)
+[![VS Marketplace Rating](https://vsmarketplacebadge.apphb.com/rating-short/BobbyZrncev.intellij-parameter-hints.svg)](https://marketplace.visualstudio.com/items?itemName=BobbyZrncev.intellij-parameter-hints)
+
 ## Settings
 
 There currently is a few configurable settings in the extension
