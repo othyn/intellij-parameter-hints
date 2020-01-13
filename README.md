@@ -14,6 +14,7 @@ There currently is a few configurable settings in the extension
 | `phpannotations.margin` | Annotation styling of margin CSS property | 5 |
 | `phpannotations.fontWeight` | Annotation styling of font-weight CSS property | "400" |
 | `phpannotations.fontStyle` | Font style for annotations. | "italic" |
+| `phpannotations.fontSize` | Font size for annotations. | "12" |
 
 ## Themable Colors
 
