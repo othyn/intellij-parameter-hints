@@ -1,6 +1,6 @@
 {
-	"name": "intellij-parameter-hints",
-	"displayName": "IntelliJ Parameter Hints",
+    "name": "intellij-parameter-hints",
+    "displayName": "IntelliJ Parameter Hints",
     "description": "PHP Parameter Hints in IntelliJ Style",
     "publisher": "BobbyZrncev",
     "version": "0.1.0",
@@ -13,17 +13,17 @@
         "type": "git",
         "uri": "https://github.com/bzrncev/intellij-parameter-hints"
     },
-	"engines": {
-		"vscode": "^1.40.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"*"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
         "commands": [
             {
                 "command": "phpannotations.toggle",
@@ -68,6 +68,11 @@
                         "type": "number",
                         "default": 5,
                         "description": "Annotation styling of margin CSS property"
+                    },
+                    "phpannotations.fontSize": {
+                        "type": "number",
+                        "default": 12,
+                        "description": "Annotation styling of font size CSS property"
                     }
                 }
             }
@@ -100,25 +105,25 @@
             }
         ]
     },
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.7",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.40.0",
-		"glob": "^7.1.5",
-		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
-		"tslint": "^5.20.0",
-		"vscode-test": "^1.2.2"
-	},
-	"dependencies": {
-		"php-parser": "^3.0.0-prerelease.9"
-	}
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.40.0",
+        "glob": "^7.1.5",
+        "mocha": "^6.2.2",
+        "typescript": "^3.6.4",
+        "tslint": "^5.20.0",
+        "vscode-test": "^1.2.2"
+    },
+    "dependencies": {
+        "php-parser": "^3.0.0-prerelease.9"
+    }
 }
