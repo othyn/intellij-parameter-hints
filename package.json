@@ -3,7 +3,7 @@
     "displayName": "IntelliJ Parameter Hints",
     "description": "PHP Parameter Hints in IntelliJ Style",
     "publisher": "BobbyZrncev",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "MIT",
     "homepage": "https://github.com/bzrncev/intellij-parameter-hints",
     "bugs": {
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "uri": "https://github.com/bzrncev/intellij-parameter-hints"
+        "url": "https://github.com/bzrncev/intellij-parameter-hints"
     },
     "engines": {
         "vscode": "^1.40.0"
